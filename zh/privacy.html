@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>潜望相机 隐私政策</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>.prose table{border-collapse:collapse;width:100%;margin:1em 0;display:block;overflow-x:auto}.prose td{min-width:7em}.prose th,.prose td{border:1px solid color-mix(in srgb,currentColor 25%,transparent);padding:.5em .6em;text-align:left;vertical-align:top}</style>
+</head>
+<body>
+  <header class="site-header shell">
+    <span class="brand">潜望相机</span>
+    <nav class="languages"><a href="../privacy.html">日本語</a><a href="../en/privacy.html">English</a><span aria-current="true">中文</span></nav>
+  </header>
+  <main id="main" class="shell">
+    <article class="document">
+      <header class="page-heading"><h1>潜望相机 隐私政策</h1></header>
+      <div class="prose">
+<p>生效日期：2026年11月8日<br>更新日期：2026年11月22日</p>
+<p>潜望相机（以下简称“本应用”）的开发者 ep3.works（以下简称“开发者”）在此说明本应用如何处理用户信息。</p>
+<h2>1. 基本原则</h2>
+<p>本应用将两台手机（或一台手机与一个浏览器）直接连接，从一台设备操作另一台设备上的相机应用。<br><strong>开发者不收集用户的个人信息、视频、照片或屏幕内容</strong>（Google Play 的购买记录除外，见第5条）。本应用没有开发者的服务器，也不会为广告或使用情况分析进行任何通信。</p>
+<h2>2. 仅在设备内处理的信息</h2>
+<table>
+<thead><tr><th>信息</th><th>用途</th><th>是否发送到设备外</th></tr></thead>
+<tbody>
+<tr><td>通过无障碍服务（AccessibilityService API）获取的屏幕元素（按钮名称和位置）以及前台应用的名称</td><td>定位快门按钮、判断已允许的应用是否打开、执行在取景端进行的操作</td><td>否</td></tr>
+<tr><td>通过无障碍服务获取的屏幕图像（仅在开启“手掌快门”时）</td><td>使用设备内的机器学习模型判断画面中是否有手掌，图像不会保存</td><td>否</td></tr>
+<tr><td>本设备已安装应用的列表（名称和图标）</td><td>在“可操作的应用”中选择取景端可操作的应用</td><td>否</td></tr>
+<tr><td>相机画面（仅在扫描配对二维码时）</td><td>读取二维码</td><td>否</td></tr>
+<tr><td>运行记录（日志、崩溃记录）</td><td>排查故障</td><td>仅在用户选择“分享日志”并选择分享对象时</td></tr>
+</tbody>
+</table>
+<h2>3. 发送到已连接设备的信息</h2>
+<p>仅在用户连接两台设备并允许屏幕共享时，本应用会将以下信息<strong>直接发送到已连接的设备</strong>，不经过开发者或任何第三方的服务器。</p>
+<ul>
+<li>主机（拍摄端）的屏幕画面（在允许屏幕共享期间。未在“可操作的应用”中允许的应用画面不会发送）</li><li>连接期间拍摄的照片（新保存到主机相册文件夹的照片）</li><li>操作内容（点按、双指缩放、快门等，从取景端发往主机）</li>
+</ul>
+<p>连接准备使用低功耗蓝牙，视频和照片通过 Wi-Fi 直连、手机创建的仅限本地的热点，或两台设备共同连接的 Wi-Fi 网络传输，不经过互联网。</p><p>在浏览器中查看时，由主机设备提供查看页面，浏览器只打开该页面。打开页面需要二维码中包含的密钥。</p><p>应用之间的连接使用配对时交换的密钥进行认证，未配对的设备无法连接。</p><p>取景端收到的照片保存在该设备的“Pictures/PeriCam”文件夹中。</p>
+<h2>4. 权限的使用目的</h2>
+<table>
+<thead><tr><th>权限</th><th>目的</th></tr></thead>
+<tbody>
+<tr><td>无障碍</td><td>如第2条所述。仅在用户同意说明并在设置中开启后使用</td></tr>
+<tr><td>屏幕共享（MediaProjection）</td><td>将主机的屏幕画面发送到取景端</td></tr>
+<tr><td>附近的设备（蓝牙、Wi-Fi）</td><td>查找并连接另一台设备，不用于获取位置信息</td></tr>
+<tr><td>照片和视频</td><td>将连接期间拍摄的照片传送到取景端</td></tr>
+<tr><td>相机</td><td>扫描配对二维码</td></tr>
+<tr><td>通知</td><td>显示正在连接</td></tr>
+</tbody>
+</table>
+<h2>5. 购买与评分</h2>
+<p>本应用付费功能的购买通过 Google Play 结算系统进行。支付信息（如卡号）由 Google 处理，开发者不会获得。开发者从 Google Play 获得的仅为订单记录（订单号、商品、金额、日期时间、国家/地区）。</p><p>本应用在设备内保存是否已购买以及免费试用的开始时间，并纳入 Android 自动备份（Google 账号备份），以便重新安装后保留。</p><p>应用内显示的评分界面是 Google Play 的功能。评分内容发送给 Google Play，开发者不会通过本应用获得。</p><p>Google 如何处理信息，请参阅 <a href="https://policies.google.com/privacy?hl=zh-CN">Google 隐私权政策</a>。</p>
+<h2>6. 向第三方提供</h2>
+<p>开发者不会向第三方提供用户信息。</p>
+<h2>7. 儿童使用</h2>
+<p>本应用不面向13岁以下的儿童。</p>
+<h2>8. 删除信息</h2>
+<p>本应用保存在设备内的信息，可通过设备的“设置”→“应用”→“潜望相机”→“存储”→“清除数据”，或卸载本应用来删除。保存在取景端的照片可以像普通照片一样删除。</p>
+<h2>9. 修订</h2>
+<p>如本政策有变更，将在本页面公告。如有重大变更，也会在本应用内通知。</p>
+<h2>10. 联系方式</h2>
+<p>开发者：ep3.works<br>邮箱：<a href="mailto:ep3works.app@gmail.com">ep3works.app@gmail.com</a></p>
+      </div>
+    </article>
+  </main>
+</body>
+</html>
