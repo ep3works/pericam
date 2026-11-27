@@ -17,21 +17,21 @@
     <article class="document">
       <header class="page-heading"><h1>PeriCam Privacy Policy</h1></header>
       <div class="prose">
-<p>Effective: November 8, 2026<br>Last updated: November 25, 2026</p>
+<p>Effective: November 8, 2026<br>Last updated: November 27, 2026</p>
 <p>This policy explains how ep3.works ("we"), the developer of PeriCam (the "app"), handles your information.</p>
 <h2>1. Overview</h2>
-<p>The app connects two phones (or a phone and a web browser) directly so that one phone can control the camera app on the other.<br><strong>We do not collect your personal information, video, photos, or screen contents</strong> (except Google Play purchase records; see section 5). The app has no servers of ours, and it sends no data for advertising or analytics.</p>
-<h2>2. Information processed only on your device</h2>
+<p>The app connects two phones (or a phone and a web browser) directly so that one phone can control the camera app on the other.<br><strong>We do not collect your personal information, video, photos, or screen contents</strong> (except Google Play purchase records and what you send through "Report a bug"; see sections 5 and 6). The app sends no data for advertising or analytics.</p>
+<h2>2. Information processed on your device</h2>
 <table>
 <thead><tr><th>Information</th><th>Purpose</th><th>Sent off the device</th></tr></thead>
 <tbody>
-<tr><td>On-screen items (button names and positions) and the name of the app in the foreground, read through the AccessibilityService API</td><td>Finding the shutter button, checking whether an app you allowed is open, performing the input made on the viewer, performing Back, Home, and Recents actions, launching an app after connecting, keeping the screen on, and displaying the countdown (saved shutter positions and app names are stored on the device)</td><td>App names may appear in diagnostic logs; sent only if you tap "Share log" and choose where to send it (only determination and detection results, such as whether control is allowed, are sent to the viewer)</td></tr>
+<tr><td>On-screen items (button names and positions) and the name of the app in the foreground, read through the AccessibilityService API</td><td>Finding the shutter button, checking whether an app you allowed is open, performing the input made on the viewer, performing Back, Home, and Recents actions, launching an app after connecting, keeping the screen on, and displaying the countdown (saved shutter positions and app names are stored on the device)</td><td>App names may appear in diagnostic logs; sent only if you tap "Share log" and choose where to send it, or if you select "Attach activity log" in "Report a bug" and send it (only determination and detection results, such as whether control is allowed, are sent to the viewer)</td></tr>
 <tr><td>Screen images taken through the AccessibilityService API (only while "Palm shutter" is turned on and the device is waiting or connected as the host; when the "Allowed apps" restriction is on, only while an allowed app is in the foreground)</td><td>Detecting an open palm with an on-device machine-learning model. Images are not stored</td><td>No</td></tr>
 <tr><td>The list of apps installed on the device (names and icons)</td><td>Letting you choose which apps the viewer may control ("Allowed apps") (your selection of allowed apps is stored on the device)</td><td>No</td></tr>
 <tr><td>Camera images (only when scanning a pairing QR code)</td><td>Reading the QR code</td><td>No</td></tr>
 <tr><td>Settings and connection information (keys used for connection, names of previously connected devices, connection names and passwords such as for Wi-Fi Direct, and app settings)</td><td>Maintaining settings and reconnecting in the future (stored on the device)</td><td>No (used for authentication with the connected device)</td></tr>
 <tr><td>Temporary files of photos received on the viewer (up to the 20 most recent photos)</td><td>Displaying on the viewer (deleted when the next wait starts)</td><td>No</td></tr>
-<tr><td>Activity records (app version, device model, Android version, wireless status, connection history including Wi-Fi network names and IP addresses, app activity logs, and crash records)</td><td>Troubleshooting</td><td>Only if you tap "Share log" and choose where to send it</td></tr>
+<tr><td>Activity records (app version, device model, Android version, wireless status, connection history including Wi-Fi network names and IP addresses, app activity logs, and crash records)</td><td>Troubleshooting</td><td>Only if you tap "Share log" and choose where to send it, or if you select "Attach activity log" in "Report a bug" and send it</td></tr>
 </tbody>
 </table>
 <h2>3. Information sent to the connected device</h2>
@@ -55,15 +55,24 @@
 </table>
 <h2>5. Purchases and ratings</h2>
 <p>Paid features are purchased through Google Play Billing. Google handles your payment details (such as card numbers); we never receive them. From Google Play we receive only order records (order number, product, price, date and time, country).</p><p>The app stores whether you have purchased, when your free trial started, when you first took a photo, whether prompts have been shown, and when the app was last used on the device, and includes this in Android Auto Backup (your Google account backup and device-to-device transfer) so that it carries over when you reinstall or switch devices.</p><p>The rating screen shown in the app is a Google Play feature. Your rating is sent to Google Play; we do not receive it through the app.</p><p>See the <a href="https://policies.google.com/privacy?hl=en">Google Privacy Policy</a> for how Google handles information.</p>
-<h2>6. Sharing with third parties</h2>
-<p>We do not share your information with third parties.</p>
-<h2>7. Children</h2>
+<h2>6. Bug reports</h2>
+<p>The app sends the following information only when you write a message in "Report a bug" in the app's settings and tap "Send". Nothing is sent automatically.</p>
+<ul>
+<li>What you entered, app version, device model, Android version, device language setting, and whether the device is a host or viewer</li>
+<li>Activity records (state history, connection and activity logs, exit reasons recorded by the OS, crash records, and wireless status). Sent only if you select "Attach activity log". IP addresses, MAC addresses, and Wi-Fi network names are redacted before sending. Video, photos, and screen images are not included. App names may be included</li>
+</ul>
+<p>You can inspect the records before sending by tapping "View details".</p>
+<p>Data is sent encrypted (HTTPS) to an endpoint we operate on Cloudflare Workers, which stores the submission in our private GitHub repository. The endpoint uses your source IP address only for rate limiting and does not store it.</p>
+<p>The submitted information is used to investigate and fix bugs, kept until the investigation and fix are complete, and then deleted.</p>
+<h2>7. Sharing with third parties</h2>
+<p>We use the services of Cloudflare, Inc. and GitHub, Inc. to receive and store "Report a bug" submissions. Other than that, we do not share your information with third parties.</p>
+<h2>8. Children</h2>
 <p>The app is not directed at children under 13.</p>
-<h2>8. Deleting information</h2>
-<p>You can delete what the app stores on your device from Settings → Apps → PeriCam → Storage → Clear data, or by uninstalling the app. However, purchase and free trial records included in Auto Backup are not deleted this way; they are removed when you delete your Google account backup. Photos saved on the viewer can be deleted like any other photo.</p>
-<h2>9. Changes</h2>
+<h2>9. Deleting information</h2>
+<p>You can delete what the app stores on your device from Settings → Apps → PeriCam → Storage → Clear data, or by uninstalling the app. However, purchase and free trial records included in Auto Backup are not deleted this way; they are removed when you delete your Google account backup. Photos saved on the viewer can be deleted like any other photo. To request deletion of information sent through "Report a bug", contact our email address with the reference number shown after sending.</p>
+<h2>10. Changes</h2>
 <p>We will announce any changes to this policy on this page.</p>
-<h2>10. Contact</h2>
+<h2>11. Contact</h2>
 <p>Developer: ep3.works<br>Email: <a href="mailto:ep3works.app@gmail.com">ep3works.app@gmail.com</a></p>
       </div>
     </article>
